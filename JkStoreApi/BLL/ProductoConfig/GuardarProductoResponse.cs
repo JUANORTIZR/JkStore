@@ -8,5 +8,6 @@ namespace BLL.ProductoConfig
 {
     class GuardarProductoResponse
     {
+        
     }
 }
