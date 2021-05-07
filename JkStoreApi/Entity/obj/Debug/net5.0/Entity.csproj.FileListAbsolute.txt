@@ -1,0 +1,12 @@
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\bin\Debug\net5.0\Entity.deps.json
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\bin\Debug\net5.0\Entity.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\bin\Debug\net5.0\ref\Entity.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\bin\Debug\net5.0\Entity.pdb
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\Entity.csprojAssemblyReference.cache
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\Entity.AssemblyInfoInputs.cache
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\Entity.AssemblyInfo.cs
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\Entity.csproj.CoreCompileInputs.cache
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\Entity.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\ref\Entity.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\Entity\obj\Debug\net5.0\Entity.pdb

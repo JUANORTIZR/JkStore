@@ -1,0 +1,17 @@
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\BLL.deps.json
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\BLL.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\ref\BLL.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\BLL.pdb
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\DAL.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\Entity.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\DAL.pdb
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\bin\Debug\net5.0\Entity.pdb
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.csprojAssemblyReference.cache
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.AssemblyInfoInputs.cache
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.AssemblyInfo.cs
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.csproj.CoreCompileInputs.cache
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.csproj.CopyComplete
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\ref\BLL.dll
+F:\Documento\Dev Zero\Prueba\Proyecto\JkStoreApi\BLL\obj\Debug\net5.0\BLL.pdb
