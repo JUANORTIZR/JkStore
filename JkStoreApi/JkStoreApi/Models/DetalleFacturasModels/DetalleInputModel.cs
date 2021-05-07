@@ -11,5 +11,6 @@ namespace JkStoreApi.Models.DetalleFacturasModels
         public int Cantidad { get; set; }
         public int IdProducto { get; set; }
         public float ValorUnitario { get; set; }
+        public float Descuento { get; set; }
     }
 }

@@ -11,6 +11,7 @@ namespace JkStoreApi.Models.FacturaModels
     {
         public Proveedor Proveedor { get; set; }
         public string IdInteresado { get; set; }
+        public string IdVendedor { get; set; }
         public List<DetalleInputModel> detallesDeFactura { get; set; }
     }
 }

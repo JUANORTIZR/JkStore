@@ -71,20 +71,51 @@ namespace DAL.Migrations
                     b.Property<string>("IdInteresado")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("IdProveedor")
+                    b.Property<string>("NitProveedor")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("InteresadoIdentificacion")
-                        .HasColumnType("nvarchar(450)");
 
                     b.Property<float>("Total")
                         .HasColumnType("real");
 
                     b.HasKey("Codigo");
 
-                    b.HasIndex("InteresadoIdentificacion");
-
                     b.ToTable("Facturas");
+                });
+
+            modelBuilder.Entity("Entity.Interesado", b =>
+                {
+                    b.Property<string>("Identificacion")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Clave")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NombreDeUsuario")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NumeroTelefonico")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerApellido")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PrimerNombre")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SegundoApellido")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SegundoNombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Identificacion");
+
+                    b.ToTable("Interesados");
                 });
 
             modelBuilder.Entity("Entity.Producto", b =>
@@ -118,17 +149,28 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ProveedorIdentificacion")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<float>("ValorUnitario")
                         .HasColumnType("real");
 
                     b.HasKey("Codigo");
 
-                    b.HasIndex("ProveedorIdentificacion");
-
                     b.ToTable("Productos");
+                });
+
+            modelBuilder.Entity("Entity.Proveedor", b =>
+                {
+                    b.Property<string>("Nit")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Nombre")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PaginaWeb")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Nit");
+
+                    b.ToTable("Proveedores");
                 });
 
             modelBuilder.Entity("Entity.Usuario", b =>
@@ -137,10 +179,6 @@ namespace DAL.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Clave")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Discriminator")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -169,22 +207,6 @@ namespace DAL.Migrations
                     b.HasKey("Identificacion");
 
                     b.ToTable("Usuarios");
-
-                    b.HasDiscriminator<string>("Discriminator").HasValue("Usuario");
-                });
-
-            modelBuilder.Entity("Entity.Interesado", b =>
-                {
-                    b.HasBaseType("Entity.Usuario");
-
-                    b.HasDiscriminator().HasValue("Interesado");
-                });
-
-            modelBuilder.Entity("Entity.Proveedor", b =>
-                {
-                    b.HasBaseType("Entity.Usuario");
-
-                    b.HasDiscriminator().HasValue("Proveedor");
                 });
 
             modelBuilder.Entity("Entity.DetalleFactura", b =>
@@ -196,31 +218,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("Entity.Factura", b =>
                 {
-                    b.HasOne("Entity.Interesado", null)
-                        .WithMany("Facturas")
-                        .HasForeignKey("InteresadoIdentificacion");
-                });
-
-            modelBuilder.Entity("Entity.Producto", b =>
-                {
-                    b.HasOne("Entity.Proveedor", null)
-                        .WithMany("Productos")
-                        .HasForeignKey("ProveedorIdentificacion");
-                });
-
-            modelBuilder.Entity("Entity.Factura", b =>
-                {
                     b.Navigation("DetallesDeFactura");
-                });
-
-            modelBuilder.Entity("Entity.Interesado", b =>
-                {
-                    b.Navigation("Facturas");
-                });
-
-            modelBuilder.Entity("Entity.Proveedor", b =>
-                {
-                    b.Navigation("Productos");
                 });
 #pragma warning restore 612, 618
         }

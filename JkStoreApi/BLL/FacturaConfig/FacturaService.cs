@@ -26,12 +26,12 @@ namespace BLL.FacturaConfig
                 {
                     factura.DetallesDeFactura = new List<DetalleFactura>();
                     factura.IdInteresado = null;
-                    Proveedor proveedor = context.Proveedores.Find(factura.Proveedor.Identificacion);
+                    Proveedor proveedor = context.Proveedores.Find(factura.Proveedor.Nit);
                     if(proveedor == null)
                     {
-                        context.Proveedores.Add(factura.Proveedor);
+                       context.Proveedores.Add(factura.Proveedor);
                     }
-                    factura.IdProveedor = factura.Proveedor.Identificacion;
+                    factura.NitProveedor = factura.Proveedor.Nit;
                     foreach (var item in factura.Proveedor.Productos)
                     {
                         Producto producto = context.Productos.Find(item.Codigo);
@@ -44,12 +44,13 @@ namespace BLL.FacturaConfig
                             producto.Existencias += item.Existencias;
                             context.Productos.Update(producto);
                         }
-                        factura.AgregarDetalle(item, item.ValorUnitario, item.Existencias);
+                        factura.AgregarDetalle(item, item.ValorUnitario,item.Descuento, item.Existencias);
                     }
                 }
                 else if(evento == "Venta")
                 {
-                  
+                    Usuario vendedor = context.Usuarios.Find(factura.Vendedor.Identificacion);
+                    if (vendedor == null) return new GuardarFacturaResponse($"No se encuentra un vendedor con el id {factura.Vendedor.Identificacion}");
                     Interesado interesado = context.Interesados.Find(factura.IdInteresado);
                     if (interesado == null)
                     {
@@ -82,8 +83,9 @@ namespace BLL.FacturaConfig
                         else
                         {
                             valorUnitario = producto.ValorUnitario;
-                        }                     
-                        factura.AgregarDetalle(producto, valorUnitario , item.Cantidad);
+                        }   
+                       
+                        factura.AgregarDetalle(producto, valorUnitario, item.Descuento , item.Cantidad);
                     }
                 }
               

@@ -63,11 +63,13 @@ namespace JkStoreApi.Controllers
 
         private Factura Mapear(FacturaInputModel facturaInput)
         {
-
+            Usuario vendedor = new Usuario();
+            vendedor.Identificacion = facturaInput.IdVendedor;
             var factura = new Factura
             {
                 Proveedor = facturaInput.Proveedor,
                 IdInteresado = facturaInput.IdInteresado,
+                Vendedor = vendedor,
                 DetallesDeFactura = MapearDetalles(facturaInput.detallesDeFactura)
             };
             return factura;
@@ -84,7 +86,8 @@ namespace JkStoreApi.Controllers
                 {
                     _Producto = producto,
                     Cantidad = item.Cantidad,
-                    ValorUnitario = item.ValorUnitario  
+                    ValorUnitario = item.ValorUnitario,
+                    Descuento = item.Descuento
                 };
                 detallesFactura.Add(detalle);
             }

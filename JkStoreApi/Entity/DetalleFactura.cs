@@ -29,14 +29,14 @@ namespace Entity
 
         }
 
-        public DetalleFactura(Producto producto, float valorUnitario, int cantidad)
+        public DetalleFactura(Producto producto, float valorUnitario, float descuento, int cantidad)
         {
             _Producto = producto;
             Nombre = producto.Nombre;
             ValorUnitario = valorUnitario;
             Cantidad = cantidad;
             SubTotal = ValorUnitario * Cantidad;
-            Descuento = CalcularDescuento(producto.Descuento);
+            Descuento = CalcularDescuento(descuento);
             Iva = CalcularIva(producto.Iva);
             CalcularTotal();
             

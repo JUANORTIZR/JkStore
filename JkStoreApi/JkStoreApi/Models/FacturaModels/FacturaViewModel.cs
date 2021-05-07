@@ -19,7 +19,7 @@ namespace JkStoreApi.Models.FacturaModels
             Codigo = factura.Codigo;
             Fecha = factura.Fecha;
             Total = factura.Total;
-            IdProveedor = factura.IdProveedor;
+            IdProveedor = factura.NitProveedor;
             IdInteresado = factura.IdInteresado;
             DetallesFactura = factura.DetallesDeFactura;
         }
