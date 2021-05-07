@@ -45,5 +45,20 @@ namespace BLL.UsuarioConfig
                 return new ConsultarUsuarioResponse(e.Message);
             }
         }
+
+        public GuardarUsuarioResponse BuscarUsuario(Usuario usuario)
+        {
+            try
+            {
+                Usuario usuarioBuscado = context.Usuarios.Where(u=>u.NombreDeUsuario == usuario.NombreDeUsuario).FirstOrDefault();
+                if (usuarioBuscado == null) return new GuardarUsuarioResponse($"El usuario no se encuentra registrado");
+                if (usuarioBuscado.Clave != usuario.Clave) return new GuardarUsuarioResponse($"La clave ingresada no coincide con el usuario ingresado");
+                return new GuardarUsuarioResponse(usuarioBuscado);
+            }
+            catch (Exception e)
+            {
+                return new GuardarUsuarioResponse(e.Message);
+            }
+        }
     }
 }

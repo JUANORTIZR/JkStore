@@ -1,0 +1,26 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="list-group container">
+    <div class="row">
+        <div class="col-10 col-lg-11">
+            <h3>Productos</h3>
+        </div>
+        <div class="col mb-1 mt-1">
+            <button [routerLink]="['/registroProducto']" routerLinkActive="router-link-active"  class="btn btn-primary me-md-2" type="button">
+                <i class="fas fa-plus"></i>
+            </button>
+          </div>
+    </div>
+    
+    <a *ngFor="let producto of productos" href="#" class="list-group-item list-group-item-action" aria-current="true">
+        
+        
+        <div class="d-flex w-100 justify-content-between">
+          <!--  <img src="../../../assets/foto.jpg" width="100" class="rounded float-start" alt="...">-->
+        <h5 class="mb-1">{{producto.nombre}}</h5>
+        <small>Productos disponibles: {{producto.existencias}}</small>
+      </div>
+      <p class="mb-1">{{producto.valorUnitario| currency}}</p>
+      <small>{{producto.iva}}</small>
+    </a>
+</div>

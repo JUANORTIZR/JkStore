@@ -1,6 +1,7 @@
 ﻿using BLL.UsuarioConfig;
 using DAL;
 using Entity;
+using JkStoreApi.Models.UsuarioModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -39,10 +40,31 @@ namespace JkStoreApi.Controllers
         }
 
         // GET api/<UsuarioController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        //Corregir estooooo"""""""
+        [HttpPost("Login")]
+        public ActionResult<Usuario> Get(UsuarioInputModel usuarioInput)
         {
-            return "value";
+            Usuario usuario = Mapear(usuarioInput);
+            var response = usuarioService.BuscarUsuario(usuario);
+            if (response.Error)
+            {
+                ModelState.AddModelError("Inicio sesion", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                {
+                    Status = StatusCodes.Status400BadRequest
+                };
+                return BadRequest(problemDetails);
+            }
+            return Ok(response.Usuario);
+        }
+        private Usuario Mapear(UsuarioInputModel usuarioInput)
+        {
+            var usuario = new Usuario
+            {
+                NombreDeUsuario = usuarioInput.NombreDeUsuario,
+                Clave = usuarioInput.Clave
+            };
+            return usuario;
         }
 
         // POST api/<UsuarioController>

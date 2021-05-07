@@ -8,3 +8,7 @@ export class Usuario {
     clave:string;
     rol:string;
 }
+export class Login{
+    nombreDeUsuario:string;
+    clave:string;
+}

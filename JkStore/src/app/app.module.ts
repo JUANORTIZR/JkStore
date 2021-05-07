@@ -9,10 +9,20 @@ import {DividerModule} from 'primeng/divider';
 import {ButtonModule} from 'primeng/button';
 import {PasswordModule} from 'primeng/password';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ProductosComponent } from './componentes/productos/productos.component';
+import { ResgistroProductoComponent } from './componentes/resgistro-producto/resgistro-producto.component';
+import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    ProductosComponent,
+    ResgistroProductoComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     DividerModule,
     ButtonModule,
     PasswordModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

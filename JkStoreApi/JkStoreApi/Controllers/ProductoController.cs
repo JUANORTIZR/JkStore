@@ -40,9 +40,19 @@ namespace JkStoreApi.Controllers
 
         // GET api/<ProductoController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public ActionResult<Producto> Get(int id)
         {
-            return "value";
+            var response = productoService.BuscarProducto(id);
+            if (response.Error)
+            {
+                ModelState.AddModelError("Buscar producto", response.Mensaje);
+                var problemDetails = new ValidationProblemDetails(ModelState)
+                {
+                    Status = StatusCodes.Status400BadRequest
+                };
+                return BadRequest(problemDetails);
+            }
+            return Ok(response.Producto);
         }
 
         // POST api/<ProductoController>

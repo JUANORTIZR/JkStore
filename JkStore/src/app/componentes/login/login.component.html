@@ -5,13 +5,13 @@
             <div class="p-fluid">
                 <div class="p-field">
                     <label for="username">Username</label>
-                    <input pInputText id="username" type="text" />
+                    <input [(ngModel)]="login.nombreDeUsuario" pInputText id="username" type="text" />
                 </div>
                 <div class="p-field">
                     <label for="password">Password</label>
-                    <input pInputText id="password" type="password" />
+                    <input [(ngModel)]="login.clave" pInputText id="password" type="password" />
                 </div>
-                <p-button label="Login"></p-button>
+                <p-button (click)="iniciarSesion()" label="Login"></p-button>
                 </div>
         </div>
         <div class="p-col-2">

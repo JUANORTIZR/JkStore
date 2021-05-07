@@ -1,0 +1,61 @@
+<app-nav-bar></app-nav-bar>
+<form class="container">
+    <div class="row justify-content-center">
+        <div class="col col-lg-8">
+            <h3>Registro de producto</h3>
+        </div>
+    </div>
+
+    <br>
+    <div class="row justify-content-center">
+        <div class="col col-lg-8">
+            <label for="exampleFormControlInput1" class="form-label">Nit proveedor</label>
+            <input [(ngModel)]="producto.idProveedor" name="idProveedor" class="form-control" type="text" placeholder="Ingrese el nit del proveedor del producto"
+                aria-label="default input example">
+
+        </div>
+        <div class="col col-lg-8">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input [(ngModel)]="producto.nombre" name="nombre" class="form-control" type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+
+        </div>
+        <div class="col col-lg-8">
+            <label for="exampleFormControlInput1" class="form-label">Categoria</label>
+            <input [(ngModel)]="producto.categoria" name="categoria" class="form-control" type="text" placeholder="Ingrese la categoria del producto"
+                aria-label="default input example">
+
+        </div>
+        <div class="col col-lg-8">
+            <label for="exampleFormControlInput1" class="form-label">Valor unitario</label>
+            <input [(ngModel)]="producto.valorUnitario" name="valorUnitario" class="form-control" type="number" placeholder="Ingrese el valor unitario del producto"
+                aria-label="default input example">
+
+        </div>
+        <div class="col col-lg-8">
+            <label for="exampleFormControlInput1" class="form-label">Iva</label>
+            <input [(ngModel)]="producto.iva" name="iva" class="form-control" type="number" placeholder="Ingrese el % porcentaje del iva"
+                aria-label="default input example">
+
+        </div>
+        <div class="col col-lg-8">
+            <label for="exampleFormControlInput1" class="form-label">Descuento</label>
+            <input [(ngModel)]="producto.descuento" name="descuento" class="form-control" type="number" placeholder="Ingrese el % porcentaje del descuento"
+                aria-label="default input example">
+        </div>
+        <div class="col col-lg-8">
+            <label for="exampleFormControlInput1" class="form-label">Cantidad</label>
+            <input [(ngModel)]="producto.existencias" name="existencias" class="form-control" type="number" placeholder="Ingrese la cantidad de productos a comprar"
+                aria-label="default input example">
+        </div>
+        <div class="col col-lg-8">
+            <label for="exampleFormControlTextarea1" class="form-label">Descripcion</label>
+            <textarea placeholder="Ingrese aqui el la descripcion del producto" name="descripcion" [(ngModel)]="producto.descripcion" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        <div class="d-grid gap-2 col-6 mx-auto mt-2">
+            <button (click)="Registrar()" class="btn btn-primary" type="button">Registrar boton</button>
+        </div>
+    </div>
+
+
+</form>

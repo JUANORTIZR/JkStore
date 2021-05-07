@@ -30,6 +30,14 @@ namespace JkStoreApi
         {
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<JkStoreContext>(p => p.UseSqlServer(connectionString));
+            services.AddCors(options => options.AddDefaultPolicy(
+                         builder => {
+                             builder.AllowAnyOrigin();
+                             builder.AllowAnyHeader();
+                             builder.AllowAnyMethod();
+                         })
+                     );
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -50,7 +58,7 @@ namespace JkStoreApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
