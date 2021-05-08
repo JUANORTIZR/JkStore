@@ -26,7 +26,8 @@ export class AuthGuard implements CanActivate {
     if(rol==this.usuario.rol){
       return true;
     }    
-    
+    this.router.navigate(["/Productos"]);
+    return false;
   }
   
 }

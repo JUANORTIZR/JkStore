@@ -5,6 +5,7 @@ import { LoginComponent } from './componentes/login/login.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { ResgistroProductoComponent } from './componentes/resgistro-producto/resgistro-producto.component';
+import { UsuariosInteresadosComponent } from './componentes/usuarios-interesados/usuarios-interesados.component';
 import { AuthGuard } from './Guards/auth.guard';
 
 const routes: Routes = [
@@ -22,6 +23,11 @@ const routes: Routes = [
     path: "registroProducto",
     canActivate: [AuthGuard], data: {"rol": "LiderEvaluo"},
     component: ResgistroProductoComponent,
+  },
+  {
+    path: "usuarioInteresados",
+    canActivate: [AuthGuard], data: {"rol": "LiderEvaluo"},
+    component: UsuariosInteresadosComponent
   },
   {
     path: "**",

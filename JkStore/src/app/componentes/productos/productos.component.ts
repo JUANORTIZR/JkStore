@@ -13,6 +13,7 @@ export class ProductosComponent implements OnInit {
   usuario: Usuario = JSON.parse(localStorage.getItem("UsuarioActivo"));
   productos: Producto[] = [];
   liderEvaluo: boolean = false;
+  liderVenta:boolean = false;
   constructor(private router: Router
     , private gestionProductoService: GesionProductosService
   ) { }
@@ -21,6 +22,9 @@ export class ProductosComponent implements OnInit {
     this.consultar();
     if (this.usuario.rol == "LiderEvaluo") {
       this.liderEvaluo = true;
+    }
+    if(this.usuario.rol == "LiderVenta"){
+      this.liderVenta = true;
     }
   }
 

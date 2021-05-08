@@ -32,7 +32,7 @@
         <p class="card-text">{{producto.nombre}}</p>
         <h5 class="card-text">{{producto.valorUnitario|currency}}</h5>
         <p class="card-text">Cantidad disponible: {{producto.existencias}}</p>
-        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <div *ngIf="liderVenta" class="d-grid gap-2 d-md-flex justify-content-md-end">
           <button class="btn btn-primary me-md-2" type="button">Agregar al carrito</button>
           <button class="btn btn-primary" type="button">Comprar</button>
         </div>

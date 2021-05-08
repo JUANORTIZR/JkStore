@@ -1,1 +1,25 @@
-<p>usuarios-interesados works!</p>
+<app-nav-bar></app-nav-bar>
+<form class="container">
+
+    <h3>Clientes</h3>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Identidificacion</th>
+            <th scope="col">Numero telefononico</th>
+            <th scope="col">Primer nombre</th>
+            <th scope="col">Primer apellido</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let interesado of interesados">
+            <th scope="row">1</th>
+            <td>{{interesado.primerNombre}}</td>
+            <td>{{interesado.numeroTelefonico}}</td>
+            <td>{{interesado.primerNombre}}</td>
+            <td>{{interesado.primerApellido}}</td>
+          </tr>
+        </tbody>
+      </table>
+</form>
