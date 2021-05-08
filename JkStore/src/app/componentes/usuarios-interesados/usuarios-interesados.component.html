@@ -1,7 +1,18 @@
 <app-nav-bar></app-nav-bar>
 <form class="container">
 
-    <h3>Clientes</h3>
+  <div class="row justify-content-md-center">
+    <div class="col-4 col-lg">
+      <h3>Clientes</h3>
+    </div>
+    <div class="col-6 col-lg-11"></div>
+    <div class="col col-lg mb-1  ">
+      <button [routerLink]="['/registroUsuario']" class="btn btn-primary me-md-2" type="button">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </div>
+
     <table class="table">
         <thead>
           <tr>

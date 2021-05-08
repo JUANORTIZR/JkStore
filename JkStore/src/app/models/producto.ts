@@ -1,5 +1,6 @@
 export class Producto {
     codigo: number;
+    fecha:Date;
     idProveedor: string;
     nombre: string;
     descripcion: string;

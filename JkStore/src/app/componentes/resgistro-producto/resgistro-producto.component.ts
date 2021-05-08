@@ -13,6 +13,10 @@ export class ResgistroProductoComponent implements OnInit {
   producto:Producto;
   proveedor:Proveedor;
   factura:Factura;
+  fechaMinimaA:Date;
+  fechaMaximaA:Date;
+  fechaInicio:Date;
+  bsValue:Date;
   constructor(private gestionProductoService:GesionProductosService
     ,private gestionProveedorService:GestionProveedorService
       ) { }
@@ -25,6 +29,15 @@ export class ResgistroProductoComponent implements OnInit {
     this.factura.detallesDeFactura=[];
     this.factura.idInteresado = "na"
     this.factura.idVendedor = "na"
+    this.contruirFecha();
+  }
+  contruirFecha(){
+    this.fechaMinimaA= new Date();
+    this.fechaMaximaA = new Date();
+    this.fechaInicio = new Date();
+    this.bsValue = new Date();
+    this.fechaMinimaA.setDate(this.fechaMinimaA.getDate() - 30);
+    this.fechaMaximaA.setDate(this.fechaMaximaA.getDate());
   }
 
   buscar(){

@@ -9,7 +9,7 @@ import { GestionInteresadoService } from 'src/app/services/gestion-interesado.se
 })
 export class UsuariosInteresadosComponent implements OnInit {
   interesados:Interesado[];
-
+  liderEvaluo:boolean = true;
   constructor(private gestionInteresado:GestionInteresadoService) { }
 
   ngOnInit(): void {

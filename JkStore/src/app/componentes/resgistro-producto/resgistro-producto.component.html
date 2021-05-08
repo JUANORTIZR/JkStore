@@ -30,7 +30,7 @@
             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
             <input [(ngModel)]="proveedor.nombre" name="nombreProveedor" class="form-control" type="text"
               placeholder="Ingrese el nombre del producto" aria-label="default input example">
-
+            
             <label for="exampleFormControlInput1" class="form-label">Pagina web</label>
             <input [(ngModel)]="proveedor.paginaWeb" name="paginaWeb" class="form-control" type="text"
               placeholder="Ingrese el nombre del producto" aria-label="default input example">
@@ -51,6 +51,13 @@
             <label for="exampleFormControlInput1" class="form-label">Nombre</label>
             <input [(ngModel)]="producto.nombre" name="nombre" class="form-control" type="text"
               placeholder="Ingrese el nombre del producto" aria-label="default input example">
+
+              <label for="exampleFormControlInput1" class="form-label">Fecha de compra</label>
+              <input type="text" class="form-control form-control-user" bsDatepicker
+                                                [bsConfig]="{ isAnimated: true }" [bsValue]="bsValue"
+                                                [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY'}" [minDate]="fechaMinimaA"
+                                                [maxDate]="fechaMaximaA" [(ngModel)]="producto.fecha" name="fecha"
+                                                placeholder="Fecha de compra del producto">
 
             <label for="exampleFormControlInput1" class="form-label">Categoria</label>
             <input [(ngModel)]="producto.categoria" name="categoria" class="form-control" type="text"

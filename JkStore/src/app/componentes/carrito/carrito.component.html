@@ -1,0 +1,42 @@
+<app-nav-bar [totalCarrito]="totalCarrito"></app-nav-bar>
+<div class="card container mt-2">
+    <h3>Carrito</h3>
+    <div *ngFor="let detalle of detalles">
+        <div class="card mb-1 mt-1">
+            <h5 class="card-header">{{detalle.producto.categoria}}</h5>
+            <div class="card-body">
+
+                <div class="float-end">Fecha de compra {{detalle.producto.fecha| date: 'short'}}</div>
+                
+
+                <h5 class="card-title" type="button">{{detalle.producto.descripcion}}</h5>
+                
+                <div class="float-end">
+                    <div class="">
+                        <input type="number" [(ngModel)]="detalle.descuento" class="form-control form-control-sm"
+                            id="floatingInput" placeholder="Descuento">
+                    </div>
+                </div>
+
+                <p class="card-text">{{detalle.producto.nombre}}</p>
+                <div class="float-end">
+                    <div class="">
+                        <input type="number" [(ngModel)]="detalle.valorUnitario" class="form-control form-control-sm"
+                            id="floatingInput" placeholder="Valor unitario">
+                    </div>
+                </div>
+                <h5 class="card-text">{{detalle.producto.valorUnitario|currency}}</h5>
+
+                <div class="float-end">
+                    <input type="number" [(ngModel)]="detalle.cantidad" class="form-control form-control-sm"
+                        id="floatingInput" placeholder="Cantidad">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button (click)="comprar()" class="btn btn-primary" type="button">Comprar</button>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+<app-nav-bar></app-nav-bar>
+<form class="card container mt-4 shadow p-3 mb-5 bg-body rounded">
+    
+    <div class="card-header">
+       <h3>Registro de cliente</h3> 
+      </div>
+
+    <br>
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6" >
+            <label for="exampleFormControlInput1" class="form-label">Identificacion</label>
+            <input [(ngModel)]="interesado.identificacion" name="identificacion" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+        <div class="col-12 col-lg-6" >
+            <label for="exampleFormControlInput1" class="form-label">Numero telefonico</label>
+            <input [(ngModel)]="interesado.numeroTelefonico" name="numeroTelefonico" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6" >
+            <label for="exampleFormControlInput1" class="form-label">Primer nombre</label>
+            <input [(ngModel)]="interesado.primerNombre" name="primerNombre" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Segundo nombre</label>
+            <input [(ngModel)]="interesado.segundoNombre" name="segundoNombre" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6" >
+            <label for="exampleFormControlInput1" class="form-label">Primer apellido</label>
+            <input [(ngModel)]="interesado.primerApellido" name="primerApellido" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Segundo apellido</label>
+            <input [(ngModel)]="interesado.segundoApellido" name="segundoApellido" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-6" >
+            <label for="exampleFormControlInput1" class="form-label">Nombre de usuario</label>
+            <input [(ngModel)]="interesado.nombreDeUsuario" name="nombreDeUsuario" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+        <div class="col-12 col-lg-6">
+            <label for="exampleFormControlInput1" class="form-label">Clave</label>
+            <input [(ngModel)]="interesado.clave" name="clave" class="form-control"
+                type="text" placeholder="Ingrese el nombre del producto"
+                aria-label="default input example">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="d-grid gap-2 col-6 mx-auto mb-2 mt-2">
+            <button (click)="Registrar()" class="btn btn-primary" type="button">Registrar</button>
+        </div>
+    </div>
+
+
+</form>

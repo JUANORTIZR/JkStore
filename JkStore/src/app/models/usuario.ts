@@ -1,5 +1,5 @@
 export class Usuario {
-    Identificacion:string;
+    identificacion:string;
     primerNombre:string;
     segundoNombre:string;
     primerApellido:string;

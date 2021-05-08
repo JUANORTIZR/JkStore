@@ -14,7 +14,11 @@ import { ProductosComponent } from './componentes/productos/productos.component'
 import { ResgistroProductoComponent } from './componentes/resgistro-producto/resgistro-producto.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { UsuariosInteresadosComponent } from './componentes/usuarios-interesados/usuarios-interesados.component';
-
+import { RegistroUsuarioComponent } from './componentes/registro-usuario/registro-usuario.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BsDatepickerModule } from "ngx-bootstrap/datepicker";
+import { CarritoComponent } from './componentes/carrito/carrito.component';
 
 
 @NgModule({
@@ -24,7 +28,9 @@ import { UsuariosInteresadosComponent } from './componentes/usuarios-interesados
     ProductosComponent,
     ResgistroProductoComponent,
     NavBarComponent,
-    UsuariosInteresadosComponent
+    UsuariosInteresadosComponent,
+    RegistroUsuarioComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +41,10 @@ import { UsuariosInteresadosComponent } from './componentes/usuarios-interesados
     PasswordModule,
     HttpClientModule,
     FormsModule,
-
+    BrowserAnimationsModule,
+    BsDatepickerModule.forRoot(),
+    NgbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

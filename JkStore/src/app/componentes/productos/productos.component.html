@@ -1,4 +1,4 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar [totalCarrito]="totalCarrito"></app-nav-bar>
 
 
   
@@ -25,15 +25,16 @@
   </div>
 
   <div  *ngFor="let producto of productos">
-    <div class="card mb-1">
+    <div class="card mb-1 mt-1">
       <h5 class="card-header"  >{{producto.categoria}}</h5>
       <div class="card-body">
+        <div class="float-end">Fecha de compra {{producto.fecha| date: 'short'}}</div>
         <h5 class="card-title" type="button">{{producto.descripcion}}</h5>
         <p class="card-text">{{producto.nombre}}</p>
         <h5 class="card-text">{{producto.valorUnitario|currency}}</h5>
         <p class="card-text">Cantidad disponible: {{producto.existencias}}</p>
         <div *ngIf="liderVenta" class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button class="btn btn-primary me-md-2" type="button">Agregar al carrito</button>
+          <button class="btn btn-primary me-md-2" (click)="agregarAlCarrito(producto)" type="button">Agregar al carrito</button>
           <button class="btn btn-primary" type="button">Comprar</button>
         </div>
       </div>

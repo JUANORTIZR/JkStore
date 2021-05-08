@@ -1,3 +1,4 @@
+import { DetalleDeFactura, DetalleDeFacturaInput } from "./detalle-factura";
 import { Producto } from "./producto";
 
 export class Factura {
@@ -5,15 +6,17 @@ export class Factura {
   proveedor: Proveedor;
   idInteresado: string;
   idVendedor: string;
-  detallesDeFactura: DetallesDeFactura[];
+  detallesDeFactura: DetalleDeFactura[];
 }
 
-export class  DetallesDeFactura {
-  cantidad: number;
-  idProducto: number;
-  valorUnitario: number;
-  descuento: number;
+export class FacturaInput {
+  evento:string;
+  proveedor: Proveedor;
+  idInteresado: string;
+  idVendedor: string;
+  detallesDeFactura: DetalleDeFacturaInput[];
 }
+
 
 export class  Proveedor {
   nit: string;

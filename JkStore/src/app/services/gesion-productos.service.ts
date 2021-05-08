@@ -22,7 +22,7 @@ export class GesionProductosService {
     return this.http.get<Producto[]>(this.url+"/Producto", this.httpOptions)
   }
 
-  guardar(factura: Factura):Observable<any> {
+  guardar(factura):Observable<any> {
     return this.http.post<Factura>(this.url+"/Factura", JSON.stringify(factura) , this.httpOptions)
       .pipe(
         tap(f => console.log(f))
