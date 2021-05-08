@@ -1,6 +1,7 @@
 import { Producto } from "./producto";
 
 export class Factura {
+  evento:string;
   proveedor: Proveedor;
   idInteresado: string;
   idVendedor: string;

@@ -12,17 +12,21 @@ import { GesionProductosService } from 'src/app/services/gesion-productos.servic
 export class ProductosComponent implements OnInit {
   usuario: Usuario = JSON.parse(localStorage.getItem("UsuarioActivo"));
   productos: Producto[] = [];
+  liderEvaluo: boolean = false;
   constructor(private router: Router
     , private gestionProductoService: GesionProductosService
   ) { }
 
   ngOnInit(): void {
     this.consultar();
+    if (this.usuario.rol == "LiderEvaluo") {
+      this.liderEvaluo = true;
+    }
   }
 
   consultar() {
-     this.gestionProductoService.consultar().subscribe(p => {
-       this.productos = p
-     });
+    this.gestionProductoService.consultar().subscribe(p => {
+      this.productos = p
+    });
   }
 }

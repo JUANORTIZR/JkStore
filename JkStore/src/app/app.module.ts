@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ProductosComponent } from './componentes/productos/productos.component';
 import { ResgistroProductoComponent } from './componentes/resgistro-producto/resgistro-producto.component';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
+import { UsuariosInteresadosComponent } from './componentes/usuarios-interesados/usuarios-interesados.component';
 
 
 
@@ -22,7 +23,8 @@ import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
     LoginComponent,
     ProductosComponent,
     ResgistroProductoComponent,
-    NavBarComponent
+    NavBarComponent,
+    UsuariosInteresadosComponent
   ],
   imports: [
     BrowserModule,
